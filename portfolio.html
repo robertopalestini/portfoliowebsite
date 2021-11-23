@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rober Palestini Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<script >
+$(document).ready(function(){
+    $(".filter-button").click(function(){
+        var value = $(this).attr('data-filter');
+        
+        if(value == "all")
+        {
+            $('.filter').show('1000');
+        }
+        else
+        {
+            $(".filter").not('.'+value).hide('4000');
+            $('.filter').filter('.'+value).show('4000'); 
+        }
+    });
+    $(".btn").each(function(){
+       $(this).click(function(){
+          $(this).addClass("active");
+          $(this).siblings().removeClass("active");
+       });
+    });
+});
+ 
+ $(document).ready(function(){
+        $("area[rel^='prettyPhoto']").prettyPhoto(); 
+        $(".galleryh:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: true});
+        $(".galleryh:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+    });
+</script>
+</head>
+<body>
+    <header>
+        <div class="holder">
+<img src="img/logo.png" width="100" alt="Rober Palestini"/>
+<h1>Rober Palestini - Portfolio</h1>
+        </div>
+</header>
+    <nav>
+        <ul class="holder">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sobremi.html">Sobre Mi</a></li>
+            <li><a href="portfolio.html" class="activo">Portfolio</a></li>
+            <li><a href="curriculum.html">Curriculum</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main class="holder">
+        <h2>Portfolio</h2>
+        <div align="center">
+            <a class="btn btn-default filter-button" data-filter="all">All</a>
+            <a class="btn btn-default filter-button" data-filter="html">HTML</a>
+            <a class="btn btn-default filter-button" data-filter="css">CSS3</a>
+            <a class="btn btn-default filter-button" data-filter="javascript">Javascript</a>
+            <a class="btn btn-default filter-button" data-filter="php">PHP</a>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mt-4 filter html">
+            <div class="single-gallery mb-20">
+              <div class="gallery-img"> 
+                  <img src="img/galeria/img02.jpg" alt=""  style=" width: 100%;"/> </div>
+              <div class="gallery-details"> <a href="img/galeria/img01.jpg" rel="prettyPhoto[gallery2]" class="gallery-btn"> </a> </div>
+            </div>
+          </div>
+         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mt-4 filter javascript">
+            <div class="single-gallery mb-20 ">
+              <div class="gallery-img"> 
+                  <img src="img/galeria/img02.jpg" alt=""  style=" width: 100%;"/> </div>
+              <div class="gallery-details"> <a href="img/galeria/img02.jpg" rel="prettyPhoto[gallery2]" class="gallery-btn"> </a> </div>
+            </div>
+          </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mt-4 filter php javascript">
+            <div class="single-gallery mb-20 ">
+              <div class="gallery-img"> 
+                  <img src="img/galeria/img02.jpg" alt=""  style=" width: 100%;"/> </div>
+              <div class="gallery-details"> <a href="img/galeria/img03.jpg" rel="prettyPhoto[gallery2]" class="gallery-btn"> </a> </div>
+            </div>
+          </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mt-4 filter css">
+            <div class="single-gallery mb-20 ">
+              <div class="gallery-img"> 
+                  <img src="img/galeria/img02.jpg" alt=""  style=" width: 100%;"/> </div>
+              <div class="gallery-details"> <a href="img/galeria/img01.jpg" rel="prettyPhoto[gallery2]" class="gallery-btn"> </a> </div>
+            </div>
+          </div>
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mt-4 filter html css">
+            <div class="single-gallery mb-20 ">
+              <div class="gallery-img"> 
+                  <img src="img/galeria/img02.jpg" alt=""  style=" width: 100%;"/> </div>
+              <div class="gallery-details"> <a href="images/thumbnails/html-css.jpg" rel="prettyPhoto[gallery2]" class="gallery-btn"> </a> </div>
+            </div>
+          </div>
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mt-4 filter php">
+            <div class="single-gallery mb-20 ">
+              <div class="gallery-img"> 
+                  <img src="img/galeria/img02.jpg" alt=""  style=" width: 100%;"/> </div>
+              <div class="gallery-details"> <a href="images/thumbnails/php.jpg" rel="prettyPhoto[gallery2]" class="gallery-btn"> </a> </div>
+            </div>
+          </div>
+        </div>
+
+    </main>
+       
+    
+
+    <footer>
+        <p>Diseñado por Rober Palestini</p>
+    </footer>
+</body>
+</html>
